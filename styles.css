@@ -43,3 +43,28 @@ ul li {
 section h2 {
     color: #4e44ce;
 }
+
+/* Стили для кнопки Присоединиться */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #00bcd4; /* Светло-берюзовый */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #008c91; /* Темный оттенок бирюзы при наведении */
+}
+
+/* Дополнительные стили для кнопки Присоединиться */
+.join-button {
+    padding: 20px 40px; /* Увеличиваем толщину */
+    font-size: 1.5em; /* Увеличиваем размер текста */
+    border-radius: 12px; /* Закругление углов */
+}

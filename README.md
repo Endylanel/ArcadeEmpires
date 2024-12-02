@@ -1,2 +1,0 @@
-# ArcadeEmpires
-Дискорд сервер

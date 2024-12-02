@@ -47,13 +47,13 @@ section h2 {
 /* Стили для кнопки Присоединиться */
 .button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 20px 40px; /* Увеличиваем толщину кнопки */
     margin-top: 20px;
     background-color: #00bcd4; /* Светло-берюзовый */
     color: #ffffff;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 1.2em;
+    border-radius: 12px; /* Углы кнопки более закругленные */
+    font-size: 1.5em; /* Увеличиваем размер текста */
     font-weight: bold;
     transition: background-color 0.3s ease;
 }

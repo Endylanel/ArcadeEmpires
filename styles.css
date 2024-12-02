@@ -30,4 +30,16 @@ nav a:hover {
 }
 main {
     padding: 20px;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+section h2 {
+    color: #4e44ce;
 }

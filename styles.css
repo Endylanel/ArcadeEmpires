@@ -68,3 +68,46 @@ section h2 {
     font-size: 1.5em; /* Увеличиваем размер текста */
     border-radius: 12px; /* Закругление углов */
 }
+/* Стили для команды администраторов */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.team-member {
+    background-color: #2d2d3e;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #4e44ce;
+}
+
+.team-member h2 {
+    color: #00bcd4;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #ffffff;
+    margin: 5px 0;
+}

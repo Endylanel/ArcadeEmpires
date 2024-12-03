@@ -4,29 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Empires - Главная</title>
-    <!-- Подключение файла стилей -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2e;
+            color: #ffffff;
+        }
+        header {
+            background-color: #4e44ce;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #2d2d3e;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4e44ce;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            color: #4e44ce;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2d2d3e;
+            font-size: 0.9em;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #40e0d0;
+            color: #ffffff;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            transition: 0.3s ease;
+        }
+        .button:hover {
+            background-color: #35b8a4;
+            cursor: pointer;
+        }
+        .banner-image {
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Arcade Empires</h1>
-        <p>Твой портал в мир гейминга, общения и веселья!</p>
-    </header>
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="features.html">Особенности</a>
-        <a href="admins.html">Администраторы</a>
-        <a href="https://discord.gg/arcade-empires" target="_blank">Присоединиться</a>
-    </nav>
-    <main>
+
+<header>
+    <h1>Arcade Empires</h1>
+    <p>Твой портал в мир гейминга, общения и веселья!</p>
+</header>
+
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О сервере</a>
+    <a href="admins.html">Администраторы</a>
+</nav>
+
+<main>
+    <section>
         <h2>Добро пожаловать в Arcade Empires!</h2>
-        <p>Нажмите на ссылки выше, чтобы узнать больше о нашем сервере.</p>
-        
-        <!-- Добавляем кнопку присоединиться -->
-        <a class="button join-button" href="https://discord.gg/arcade-empires" target="_blank">Присоединиться</a>
-    </main>
-    <footer>
-        <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
-    </footer>
+        <p>Присоединяйтесь к нашему сообществу и наслаждайтесь общением и играми вместе с нами.</p>
+        <img src="https://t3.ftcdn.net/jpg/07/41/57/50/360_F_741575084_eLPzRBX4siOp3FbEsTOfkFNS0KO897HY.jpg" 
+             alt="Баннер сервера Arcade Empires" class="banner-image">
+        <a href="https://discord.gg/wQCb3rUxsq" target="_blank" class="button">Присоединиться</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
+</footer>
+
 </body>
 </html>

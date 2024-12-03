@@ -13,13 +13,18 @@
             color: #ffffff;
         }
         header {
-            background-color: #4e44ce;
+            background: linear-gradient(135deg, #4e44ce, #40e0d0);
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            color: #ffffff;
+        }
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
         }
         nav {
             display: flex;
@@ -34,23 +39,22 @@
             font-weight: bold;
         }
         nav a:hover {
-            color: #4e44ce;
+            color: #40e0d0;
         }
         main {
-            padding: 20px;
-            text-align: center;
+            padding: 40px 20px;
         }
         section {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
         section h2 {
             color: #4e44ce;
+            font-size: 2em;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #2d2d3e;
-            font-size: 0.9em;
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
         .button {
             display: inline-block;
@@ -69,11 +73,29 @@
             background-color: #35b8a4;
             cursor: pointer;
         }
-        .banner-image {
-            margin: 20px auto;
-            max-width: 100%;
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .feature {
+            background-color: #2d2d3e;
             border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .feature h3 {
+            color: #40e0d0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d2d3e;
+            font-size: 0.9em;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -92,10 +114,36 @@
 
 <main>
     <section>
-        <h2>Добро пожаловать в Arcade Empires!</h2>
-        <p>Присоединяйтесь к нашему сообществу и наслаждайтесь общением и играми вместе с нами.</p>
-        <img src="https://t3.ftcdn.net/jpg/07/41/57/50/360_F_741575084_eLPzRBX4siOp3FbEsTOfkFNS0KO897HY.jpg" 
-             alt="Баннер сервера Arcade Empires" class="banner-image">
+        <h2>Добро пожаловать!</h2>
+        <p>Arcade Empires — это идеальное место для всех, кто любит общаться, играть в игры и находить новых друзей. Мы создали пространство, где каждый может почувствовать себя как дома!</p>
+        <a href="https://discord.gg/wQCb3rUxsq" target="_blank" class="button">Присоединиться</a>
+    </section>
+
+    <section>
+        <h2>Почему стоит выбрать нас?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🎮 Геймерское сообщество</h3>
+                <p>Обсуждайте новинки индустрии, делитесь стратегиями и играйте вместе с участниками нашего сервера.</p>
+            </div>
+            <div class="feature">
+                <h3>📢 События и турниры</h3>
+                <p>Участвуйте в интересных ивентах, состязаниях и квестах, чтобы побеждать и зарабатывать награды!</p>
+            </div>
+            <div class="feature">
+                <h3>🎶 Музыка и релакс</h3>
+                <p>Захотелось отдохнуть? Включите музыку в музыкальных комнатах и наслаждайтесь атмосферой.</p>
+            </div>
+            <div class="feature">
+                <h3>🏆 Система уровней</h3>
+                <p>Получайте достижения и повышайте свой уровень, участвуя в жизни нашего сообщества.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Присоединяйтесь к нам!</h2>
+        <p>Мы всегда рады новым участникам. Найдите новых друзей, общайтесь и проводите время с удовольствием. Присоединяйтесь прямо сейчас!</p>
         <a href="https://discord.gg/wQCb3rUxsq" target="_blank" class="button">Присоединиться</a>
     </section>
 </main>

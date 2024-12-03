@@ -4,27 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Особенности - Arcade Empires</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2e;
+            color: #ffffff;
+        }
+        header {
+            background-color: #4e44ce;
+            text-align: center;
+            padding: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #ffffff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: #2d2d3e;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #40e0d0;
+        }
+        main {
+            padding: 40px 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #2d2d3e;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        li:hover {
+            background-color: #40e0d0;
+        }
+        li span {
+            margin-right: 15px;
+            font-size: 1.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d2d3e;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 30px;
+            background-color: #40e0d0;
+            color: #ffffff;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            transition: 0.3s ease;
+        }
+        .button:hover {
+            background-color: #35b8a4;
+        }
+        .text-ad {
+            margin-top: 30px;
+            background-color: #2d2d3e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Особенности сервера</h1>
+        <h1>Особенности сервера Arcade Empires</h1>
     </header>
+    
     <nav>
         <a href="index.html">Главная</a>
         <a href="features.html">Особенности</a>
         <a href="admins.html">Администраторы</a>
         <a href="https://discord.gg/wQCb3rUxsq" target="_blank">Присоединиться</a>
     </nav>
+    
     <main>
-        <ul>
-            <li>🎮 Каналы для обсуждения популярных игр</li>
-            <li>📢 Регулярные мероприятия и турниры</li>
-            <li>🎶 Музыкальные комнаты с ботами</li>
-            <li>💬 Чат для знакомства и общения</li>
-            <li>🏆 Система уровней и наград для активных участников</li>
-        </ul>
+        <section>
+            <h2>Что делает нас уникальными?</h2>
+            <ul>
+                <li><span>🎮</span> Каналы для обсуждения популярных игр</li>
+                <li><span>📢</span> Регулярные мероприятия и турниры</li>
+                <li><span>🎶</span> Музыкальные комнаты с ботами</li>
+                <li><span>💬</span> Чат для знакомства и общения</li>
+                <li><span>🏆</span> Система уровней и наград для активных участников</li>
+            </ul>
+        </section>
+
+        <section class="text-ad">
+            <h2>Наши обновления</h2>
+            <p>Мы обновили сайт и добавили много новых интересных функций для всех наших участников! Вот что изменилось:</p>
+            <ul>
+                <li><strong>✨ Обновленная главная страница:</strong> новый стиль и дизайн, доступность дополнительной информации о сервере и новых функциях.</li>
+                <li><strong>🧑‍💻 Вкладка "Администраторы":</strong> теперь можно узнать больше о нашей команде и её роли в управлении сервером.</li>
+                <li><strong>🔗 Упрощенная навигация:</strong> переходите между различными разделами сайта, такими как "О сервере", "Администраторы" и другие, без лишних усилий!</li>
+            </ul>
+            <p>Не упустите шанс узнать обо всех новинках и стать частью нашего сообщества!</p>
+            <a href="https://endylanel.github.io/ArcadeEmpires/index.html" target="_blank" class="button">Перейти на сайт</a>
+        </section>
     </main>
+    
     <footer>
         <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
     </footer>

@@ -6,95 +6,83 @@
     <title>Администраторы - Arcade Empires</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2e;
+            color: white;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #1e1e2e, #4e44ce);
-            color: #ffffff;
         }
         header {
-            background: linear-gradient(to right, #4e44ce, #40e0d0);
+            background-color: #4e44ce;
             text-align: center;
-            padding: 40px;
+            padding: 30px;
         }
         header h1 {
             margin: 0;
             font-size: 3em;
-            color: #ffffff;
         }
         nav {
             display: flex;
             justify-content: center;
             padding: 15px;
-            background-color: rgba(45, 45, 62, 0.9);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color: #2d2d3e;
         }
         nav a {
             margin: 0 20px;
             text-decoration: none;
             color: #ffffff;
             font-weight: bold;
-            font-size: 1.2em;
         }
         nav a:hover {
             color: #40e0d0;
         }
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        .admins {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 30px;
         }
         .admin-card {
-            position: relative;
-            background: linear-gradient(to bottom right, #2d2d3e, #4e44ce);
-            border-radius: 15px;
-            text-align: center;
+            background-color: #2d2d3e;
             padding: 20px;
-            margin: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            transition: transform 0.3s ease, background 0.3s ease;
+            border-radius: 10px;
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
         }
         .admin-card:hover {
-            transform: scale(1.05);
-            background: linear-gradient(to bottom right, #40e0d0, #4e44ce);
+            background-color: #40e0d0;
+            cursor: pointer;
         }
         .admin-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 100%;
+            border-radius: 10px;
             margin-bottom: 15px;
         }
-        .admin-card h3 {
-            margin: 10px 0;
-            font-size: 1.5em;
-        }
-        .admin-card p {
+        .admin-info {
             display: none;
-            font-size: 1em;
-            margin: 0;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d2d3e;
+            padding: 10px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .admin-card:hover p {
+        .admin-card:hover .admin-info {
             display: block;
-            animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            opacity: 1;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: rgba(45, 45, 62, 0.9);
+            background-color: #2d2d3e;
             font-size: 0.9em;
             margin-top: 40px;
         }
@@ -102,8 +90,7 @@
 </head>
 <body>
     <header>
-        <h1>Наша команда</h1>
-        <h2>Команда администраторов Arcade Empires<h2>
+        <h1>Администраторы Arcade Empires</h1>
     </header>
     
     <nav>
@@ -113,38 +100,43 @@
         <a href="https://discord.gg/wQCb3rUxsq" target="_blank">Присоединиться</a>
     </nav>
     
-    <main>
-         <section class="text-ad">
-                    <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);">
-                Наведитесь мышкой чтобы узнать больше о администраторе!
-         </section>
-        <section>
-            <div class="cards-container">
-                <div class="admin-card">
-                    <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731799_11-abrakadabra-fun-p-anime-avi-obrabotannie-milie-11.jpg" alt="Endylanel">
-                    <h3>Endylanel</h3>
-                    <p>Создатель сервера и вдохновитель нашего сообщества.</p>
-                    <p>Имя: Даниил, возраст: 16</p>
-                </div>
-                <div class="admin-card">
-                    <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731766_3-abrakadabra-fun-p-anime-avi-obrabotannie-milie-3.jpg" alt="✞EZ✞">
-                    <h3>✞EZ✞</h3>
-                    <p>Главный администратор, следящий за порядком на сервере.</p>
-                    <p>Имя: Саша, возраст: 15</p>
-                </div>
-                <div class="admin-card">
-                    <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731792_9-abrakadabra-fun-p-anime-avi-obrabotannie-milie-9.jpg" alt="Чарик">
-                    <h3>Чарик</h3>
-                    <p>Администратор, который помогает с техническими аспектами сервера.</p>
-                    <p>Имя: Саша, возраст: 16</p>                                                                        
-                </div>
+    <div class="admins">
+        <div class="admin-card">
+            <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731832_26-abrakadabra-fun-p-anime-avi-obrabotannie-milie-26.jpg" alt="Endylanel">
+            <h3>Endylanel</h3>
+            <p>Создатель сервера</p>
+            <p><strong>Имя:</strong> Данил</p>
+            <p><strong>Возраст:</strong> 16 лет</p>
+            <div class="admin-info">
+                <p>Endylanel — основатель и руководитель проекта. Обеспечивает развитие сервера и управления им.</p>
             </div>
-        </section>
-    </main>
-    
+        </div>
+
+        <div class="admin-card">
+            <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731837_21-abrakadabra-fun-p-anime-avi-obrabotannie-milie-21.jpg" alt="✞EZ✞">
+            <h3>✞EZ✞</h3>
+            <p>Гл. Администратор</p>
+            <p><strong>Имя:</strong> Саша</p>
+            <p><strong>Возраст:</strong> 16 лет</p>
+            <div class="admin-info">
+                <p>✞EZ✞ — главный администратор, занимается техническими аспектами и управлением на сервере.</p>
+            </div>
+        </div>
+
+        <div class="admin-card">
+            <img src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1640731849_12-abrakadabra-fun-p-anime-avi-obrabotannie-milie-12.jpg" alt="Чарик">
+            <h3>Чарик</h3>
+            <p>Администратор</p>
+            <p><strong>Имя:</strong> Саша</p>
+            <p><strong>Возраст:</strong> 16 лет</p>
+            <div class="admin-info">
+                <p>Чарик — администратор, помогает с организацией мероприятий и обеспечением порядка на сервере.</p>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
     </footer>
 </body>
 </html>
-

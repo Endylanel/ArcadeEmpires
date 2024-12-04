@@ -13,18 +13,21 @@
             color: #ffffff;
             line-height: 1.6;
         }
+
         header {
             background: linear-gradient(to right, #4e44ce, #40e0d0);
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
+
         header h1 {
             margin: 0;
             font-size: 3em;
             color: #ffffff;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
+
         nav {
             display: flex;
             justify-content: center;
@@ -33,6 +36,7 @@
             backdrop-filter: blur(5px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
+
         nav a {
             margin: 0 20px;
             text-decoration: none;
@@ -41,14 +45,24 @@
             font-size: 1.2em;
             transition: color 0.3s ease;
         }
+
         nav a:hover {
             color: #40e0d0;
         }
+
         main {
             padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -56,6 +70,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         li {
             background: linear-gradient(to bottom right, #2d2d3e, #4e44ce);
             border-radius: 10px;
@@ -67,14 +82,17 @@
             flex-direction: column;
             align-items: center;
         }
+
         li:hover {
             transform: translateY(-10px);
             background: linear-gradient(to bottom right, #40e0d0, #4e44ce);
         }
+
         li span {
             margin-bottom: 10px;
             font-size: 2em;
         }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -82,6 +100,31 @@
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
             margin-top: 40px;
             font-size: 0.9em;
+        }
+
+        .text-ad {
+            background: linear-gradient(to right, #2d2d3e, #4e44ce);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-ad ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        .text-ad li {
+            margin-bottom: 15px;
+        }
+
+        .text-ad h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -99,9 +142,7 @@
     
     <main>
         <section>
-            <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);">
-                Что делает нас уникальными?
-            </h2>
+            <h2>Что делает нас уникальными?</h2>
             <ul>
                 <li>
                     <span>🎮</span>
@@ -130,18 +171,14 @@
             </ul>
         </section>
         
-         <section class="text-ad">
-                    <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);">
-                Мы обновили сайт и добавили много новых интересных функций!
-            </h2>
+        <section class="text-ad">
+            <h2>Мы обновили сайт и добавили много новых интересных функций!</h2>
             <ul>
                 <li><strong>✨ Обновленная главная страница:</strong> новый стиль и дизайн, доступность дополнительной информации о сервере и новых функциях.</li>
                 <li><strong>🧑‍💻 Вкладка "Администраторы":</strong> теперь можно узнать больше о нашей команде и её роли в управлении сервером.</li>
                 <li><strong>🔗 Упрощенная навигация:</strong> переходите между различными разделами сайта, такими как "О сервере", "Администраторы" и другие, без лишних усилий!</li>
             </ul>
-              <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);">
-                Не упустите шанс узнать обо всех новинках и стать частью нашего сообщества!
-            </h2>
+            <h2>Не упустите шанс узнать обо всех новинках и стать частью нашего сообщества!</h2>
         </section>
     </main>
     

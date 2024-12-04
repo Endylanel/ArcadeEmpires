@@ -18,10 +18,7 @@
             text-align: center;
             padding: 40px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -29,9 +26,13 @@
             color: #ffffff;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
-        .santa-hat {
-            margin-left: 15px;
-            width: 80px; /* Размер шапочки */
+        header .santa-hat {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: auto;
         }
         nav {
             display: flex;
@@ -158,10 +159,8 @@
 <body>
     <div class="stars"></div> <!-- Контейнер для анимации -->
     <header>
+        <img src="https://foni.papik.pro/uploads/posts/2024-09/foni-papik-pro-8skh-p-kartinki-shapka-deda-moroza-na-prozrachnom-2.png" alt="Шапка Деда Мороза" class="santa-hat">
         <h1>Добро пожаловать на Arcade Empires!</h1>
-        <div class="santa-hat">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Santa_Claus_2020.svg/1200px-Santa_Claus_2020.svg.png" alt="Шапка Деда Мороза">
-        </div>
     </header>
     
     <nav>

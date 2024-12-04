@@ -14,176 +14,246 @@
             line-height: 1.6;
         }
 
-        header {
-            background: #141414; /* Темный фон для хедера */
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        }
-
+        /* Фиксированное меню */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            z-index: 100;
             display: flex;
             justify-content: center;
-            padding: 15px;
-            background-color: rgba(45, 45, 62, 0.9);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         nav a {
             margin: 0 20px;
             text-decoration: none;
             color: #ffffff;
-            font-weight: bold;
             font-size: 1.2em;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #e50914; /* Красный при наведении, как у Netflix */
+            color: #e50914;
         }
 
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
+        header {
+            padding: 30px 20px;
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        li {
-            background-color: #2b2b2b; /* Черный с оттенками серого, как на Netflix */
-            border-radius: 10px;
-            padding: 20px;
-            font-size: 1.2em;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            color: #ffffff;
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://your-image-url.com/image.jpg') no-repeat center center/cover;
+            height: 45vh;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
 
-        li:hover {
-            transform: translateY(-10px);
-            background-color: #e50914; /* Красный при наведении */
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
 
-        li span {
-            margin-bottom: 10px;
-            font-size: 2em;
+        .highlight {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .highlight h2 {
+            font-size: 2.5em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .highlight p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .feature-card {
+            background-color: #141414; /* Черный фон */
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); /* Добавлена тень */
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.05); /* Карточки увеличиваются */
+            background: linear-gradient(135deg, #000000, #e50914); /* Градиент с черного на красный */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9); /* Увеличена тень */
+        }
+
+        .feature-card h3 {
+            margin: 10px 0;
+            font-size: 1.6em; /* Увеличен размер шрифта */
+            color: #ffffff; /* Цвет текста */
+            transition: color 0.3s ease;
+        }
+
+        .feature-card:hover h3 {
+            color: #e50914; /* Красный цвет текста при наведении */
+        }
+
+        .feature-card p {
+            font-size: 1.2em;
+            color: #cccccc; /* Легкий серый цвет текста */
+            transition: color 0.3s ease;
+        }
+
+        .feature-card:hover p {
+            color: #ffffff; /* Белый цвет текста при наведении */
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e50914;
+            color: #ffffff;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b20710;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: rgba(45, 45, 62, 0.9);
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-            margin-top: 40px;
-            font-size: 0.9em;
+            background-color: #141414;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .text-ad {
-            background-color: #2b2b2b; /* Черный с оттенками серого */
-            border-radius: 10px;
-            padding: 30px;
-            margin-top: 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        /* Анимация звезд */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
         }
 
-        .text-ad ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 1.2em;
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffffff, rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: shooting-star linear infinite;
         }
 
-        .text-ad li {
-            margin-bottom: 15px;
-        }
-
-        .text-ad h2 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        @keyframes shooting-star {
+            from {
+                transform: translate(0, 0) rotate(45deg);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-200px, 200px) rotate(45deg);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Особенности сервера Arcade Empires</h1>
-    </header>
-    
+    <div class="stars"></div> <!-- Контейнер для анимации -->
     <nav>
         <a href="index.html">Главная</a>
         <a href="features.html">Особенности</a>
         <a href="admins.html">Администраторы</a>
-        <a href="https://discord.gg/wQCb3rUxsq" target="_blank">Присоединиться</a>
     </nav>
     
+    <header>
+        <h1>Добро пожаловать на Arcade Empires!</h1>
+    </header>
+    
     <main>
-        <section>
-            <h2>Что делает нас уникальными?</h2>
-            <ul>
-                <li>
-                    <span>🎮</span>
-                    Каналы для обсуждения популярных игр
-                </li>
-                <li>
-                    <span>📢</span>
-                    Регулярные мероприятия и турниры
-                </li>
-                <li>
-                    <span>🎶</span>
-                    Музыкальные комнаты с ботами
-                </li>
-                <li>
-                    <span>💬</span>
-                    Чат для знакомства и общения
-                </li>
-                <li>
-                    <span>🏆</span>
-                    Система уровней и наград для активных участников
-                </li>
-                <li>
-                    <span>🌟</span>
-                    Уникальное и дружелюбное сообщество
-                </li>
-            </ul>
+        <section class="highlight">
+            <h2>Твое сообщество для игр и общения</h2>
+            <p>Присоединяйся к нам и наслаждайся дружной атмосферой, увлекательными мероприятиями и множеством возможностей для общения.</p>
         </section>
         
-        <section class="text-ad">
-            <h2>Мы обновили сайт и добавили много новых интересных функций!</h2>
-            <ul>
-                <li><strong>✨ Обновленная главная страница:</strong> новый стиль и дизайн, доступность дополнительной информации о сервере и новых функциях.</li>
-                <li><strong>🧑‍💻 Вкладка "Администраторы":</strong> теперь можно узнать больше о нашей команде и её роли в управлении сервером.</li>
-                <li><strong>🔗 Упрощенная навигация:</strong> переходите между различными разделами сайта, такими как "О сервере", "Администраторы" и другие, без лишних усилий!</li>
-            </ul>
-            <h2>Не упустите шанс узнать обо всех новинках и стать частью нашего сообщества!</h2>
+        <section class="features">
+            <div class="feature-card">
+                <h3>🎮 Игры и турниры</h3>
+                <p>Организуем турниры по самым популярным играм. Сразись с друзьями!</p>
+            </div>
+            <div class="feature-card">
+                <h3>💬 Активный чат</h3>
+                <p>Заводи друзей и обсуждай интересные темы в нашем сообществе.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📢 Регулярные события</h3>
+                <p>Еженедельные ивенты для всех участников сервера.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎶 Музыкальные комнаты</h3>
+                <p>Слушай любимую музыку с друзьями.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏆 Система наград</h3>
+                <p>Получай награды за активность в чате.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💬 Лучшие модеры</h3>
+                <p>Быстро реагируют и помогают пользователям.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌍 Мировая карта</h3>
+                <p>Играй с друзьями из разных уголков мира.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏅 Рейтинг</h3>
+                <p>Повышай свой рейтинг и стань лучшим игроком!</p>
+            </div>
         </section>
+        
+        <div class="button-container">
+            <a href="https://discord.gg/wQCb3rUxsq" class="button">Присоединиться</a>
+        </div>
     </main>
     
     <footer>
         <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
     </footer>
+
+    <script>
+        const starsContainer = document.querySelector('.stars');
+        const starCount = 100; // Количество звезд
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDuration = Math.random() * 3 + 2 + 's';
+            star.style.animationDelay = Math.random() * 5 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
 </html>

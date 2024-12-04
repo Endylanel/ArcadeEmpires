@@ -14,6 +14,38 @@
             line-height: 1.6;
         }
 
+        /* Звезды */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffffff, rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: shooting-star linear infinite;
+        }
+
+        @keyframes shooting-star {
+            from {
+                transform: translate(0, 0) rotate(45deg);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-200px, 200px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
         header {
             padding: 30px 20px;
             text-align: center;
@@ -75,8 +107,17 @@
         ul {
             list-style-type: none;
             padding: 0;
+        }
+
+        .features-first {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+            grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+            gap: 20px;
+        }
+
+        .features-second {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 колонки */
             gap: 20px;
         }
 
@@ -160,6 +201,9 @@
     </style>
 </head>
 <body>
+    <!-- Звезды -->
+    <div class="stars"></div>
+
     <header>
         <h1>Особенности сервера Arcade Empires</h1>
     </header>
@@ -174,7 +218,7 @@
     <main>
         <section>
             <h2>Что делает нас уникальными?</h2>
-            <ul>
+            <div class="features-first">
                 <li>
                     <span>🎮</span>
                     Каналы для обсуждения популярных игр
@@ -199,7 +243,7 @@
                     <span>🌟</span>
                     Уникальное и дружелюбное сообщество
                 </li>
-            </ul>
+            </div>
         </section>
         
         <section class="text-ad">
@@ -216,5 +260,18 @@
     <footer>
         <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
     </footer>
+
+    <script>
+        // Создаем звезды в случайных местах на экране
+        const starsContainer = document.querySelector('.stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = `${Math.random() * 5 + 2}s`; // случайная скорость движения
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
 </html>

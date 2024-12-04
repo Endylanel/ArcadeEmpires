@@ -6,36 +6,50 @@
     <title>Администраторы - Arcade Empires</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: linear-gradient(45deg, #1e1e2e, #4e44ce);
             color: white;
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
+
         header {
             background-color: #4e44ce;
             text-align: center;
             padding: 30px;
         }
+
         header h1 {
             margin: 0;
             font-size: 3em;
         }
+
         nav {
             display: flex;
             justify-content: center;
             padding: 15px;
             background-color: #2d2d3e;
         }
+
         nav a {
             margin: 0 20px;
             text-decoration: none;
             color: #ffffff;
             font-weight: bold;
         }
+
         nav a:hover {
             color: #40e0d0;
         }
+
+        .intro-text {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+        }
+
         .admins {
             display: flex;
             justify-content: space-evenly;
@@ -43,6 +57,7 @@
             padding: 30px;
             text-align: center;
         }
+
         .admin-card {
             background-color: #2d2d3e;
             padding: 20px;
@@ -53,16 +68,30 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
+
         .admin-card:hover {
             background-color: #40e0d0;
             cursor: pointer;
             transform: scale(1.05);
         }
+
         .admin-card img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 15px;
         }
+
+        .admin-card h3 {
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .admin-card p {
+            font-size: 1em;
+            color: #fff;
+            margin: 5px 0;
+        }
+
         .admin-info {
             display: none;
             position: absolute;
@@ -77,10 +106,12 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+
         .admin-card:hover .admin-info {
             display: block;
             opacity: 1;
         }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -88,11 +119,37 @@
             font-size: 0.9em;
             margin-top: 40px;
         }
-        .intro-text {
-            font-size: 1.5em;
-            text-align: center;
-            margin-top: 30px;
-            color: #fff;
+
+        /* Звезды */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffffff, rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: shooting-star linear infinite;
+        }
+
+        @keyframes shooting-star {
+            from {
+                transform: translate(0, 0) rotate(45deg);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-200px, 200px) rotate(45deg);
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -132,13 +189,7 @@
             <p><strong>Возраст:</strong> 16 лет</p>
             <div class="admin-info">
                 <p>✞EZ✞ — главный администратор, занимается техническими аспектами и управлением на сервере.
-                    
-                Текст от администратора: Привет! С вами главный администратор сервера EZ(Алекснадр)  "Aracde Empires" 
-                Увлекаюсь ПВЕ играми. К примеру Сталкер, Метро и т.п
-                Иногда поигрую в раст, кс,  доту
-                Делаю сервер лучше управляю, контролирую нашу доблестную администацию
-                Даю хоршие идеи для сервера, хороший приятель владельца
-                Хороший собеседник и чиловый парень.</p>
+                Текст от администратора: Привет! С вами главный администратор сервера EZ (Александр). Увлекаюсь ПВЕ играми, такими как Сталкер, Метро и т.п. Иногда поиграю в Раст, КС, Доту. Работая над сервером, управляю и контролирую нашу команду, предлагаю идеи для улучшения.</p>
             </div>
         </div>
 
@@ -153,14 +204,14 @@
             </div>
         </div>
 
-         <div class="admin-card">
+        <div class="admin-card">
             <img src="https://i.pinimg.com/736x/c4/63/36/c463367248b06d6d4ce1331ade3f3129.jpg" alt="Enot_iz_Berlogi 🐾">
             <h3>Enot_iz_Berlogi 🐾</h3>
             <p>Тест.Модератор</p>
             <p><strong>Имя:</strong> Илья</p>
             <p><strong>Возраст:</strong> 17 лет</p>
             <div class="admin-info">
-                <p>Enot_iz_Berlogi 🐾 —  это наш тестовый модератор, который помогает поддерживать порядок на сервере, а также проверяет новые фичи и помогает пользователям. Он активен и всегда готов помочь!</p>
+                <p>Enot_iz_Berlogi 🐾 — тестовый модератор, помогает поддерживать порядок на сервере, проверяет новые функции и всегда готов помочь пользователям!</p>
             </div>
         </div>
     </div>
@@ -168,5 +219,18 @@
     <footer>
         <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
     </footer>
+
+    <script>
+        // Создаем звезды в случайных местах на экране
+        const starsContainer = document.querySelector('.stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = `${Math.random() * 5 + 2}s`; // случайная скорость движения
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
 </html>

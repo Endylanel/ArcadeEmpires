@@ -7,120 +7,146 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #1e1e2e, #4e44ce);
-            color: white;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            background-color: #141414;
+            color: #ffffff;
+            line-height: 1.6;
         }
 
-        header {
-            background-color: #4e44ce;
-            text-align: center;
-            padding: 30px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-
+        /* Фиксированное меню */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            z-index: 100;
             display: flex;
             justify-content: center;
-            padding: 15px;
-            background-color: #2d2d3e;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         nav a {
             margin: 0 20px;
             text-decoration: none;
             color: #ffffff;
-            font-weight: bold;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #40e0d0;
+            color: #e50914;
         }
 
-        .intro-text {
-            font-size: 1.5em;
+        header {
+            padding: 30px 20px;
             text-align: center;
-            margin-top: 30px;
-            color: #fff;
+            color: #ffffff;
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://your-image-url.com/image.jpg') no-repeat center center/cover;
+            height: 45vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .highlight {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .highlight h2 {
+            font-size: 2.5em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .highlight p {
+            font-size: 1.2em;
+            margin: 20px 0;
         }
 
         .admins {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            padding: 30px;
-            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+            gap: 20px;
+            padding: 40px 20px;
         }
 
         .admin-card {
-            background-color: #2d2d3e;
+            background-color: #141414;
+            border-radius: 15px;
             padding: 20px;
-            border-radius: 10px;
-            width: 250px;
-            margin: 10px;
-            position: relative;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
         }
 
         .admin-card:hover {
-            background-color: #40e0d0;
-            cursor: pointer;
-            transform: scale(1.05);
-        }
-
-        .admin-card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            transform: translateY(-10px) scale(1.05);
+            background: linear-gradient(135deg, #000000, #e50914);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9);
         }
 
         .admin-card h3 {
-            font-size: 1.5em;
-            color: #fff;
+            margin: 10px 0;
+            font-size: 1.6em;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .admin-card:hover h3 {
+            color: #e50914;
         }
 
         .admin-card p {
-            font-size: 1em;
-            color: #fff;
-            margin: 5px 0;
+            font-size: 1.2em;
+            color: #cccccc;
+            transition: color 0.3s ease;
         }
 
-        .admin-info {
-            display: none;
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #2d2d3e;
-            padding: 10px;
-            border-radius: 10px;
-            width: 80%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .admin-card:hover .admin-info {
-            display: block;
-            opacity: 1;
+        .admin-card:hover p {
+            color: #ffffff;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #2d2d3e;
-            font-size: 0.9em;
+            background-color: #141414;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .button-container {
+            text-align: center;
             margin-top: 40px;
         }
 
-        /* Звезды */
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e50914;
+            color: #ffffff;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b20710;
+        }
+
+        /* Анимация звезд */
         .stars {
             position: fixed;
             top: 0;
@@ -154,81 +180,89 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Администраторы Arcade Empires</h1>
-    </header>
-    
+    <div class="stars"></div> <!-- Контейнер для анимации звезд -->
     <nav>
         <a href="index.html">Главная</a>
         <a href="features.html">Особенности</a>
         <a href="admins.html">Администраторы</a>
-        <a href="https://discord.gg/wQCb3rUxsq" target="_blank">Присоединиться</a>
     </nav>
     
-    <div class="intro-text">
-        <p>Чтобы узнать больше о администраторе, наведитесь на него мышкой</p>
-    </div>
-
-    <div class="admins">
-        <div class="admin-card">
-            <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731832_26-abrakadabra-fun-p-anime-avi-obrabotannie-milie-26.jpg" alt="Endylanel">
-            <h3>Endylanel</h3>
-            <p>Создатель сервера</p>
-            <p><strong>Имя:</strong> Данил</p>
-            <p><strong>Возраст:</strong> 16 лет</p>
-            <div class="admin-info">
-                <p>Endylanel — основатель и руководитель проекта. Обеспечивает развитие сервера и управления им.</p>
+    <header>
+        <h1>Администраторы Arcade Empires</h1>
+    </header>
+    
+    <main>
+        <section class="highlight">
+            <h2>Наша команда администраторов</h2>
+            <p>Присоединяйтесь к нашему серверу и узнайте больше о наших администраторах.</p>
+        </section>
+        
+        <section class="admins">
+            <div class="admin-card">
+                <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731832_26-abrakadabra-fun-p-anime-avi-obrabotannie-milie-26.jpg" alt="Endylanel">
+                <h3>Endylanel</h3>
+                <p>Создатель сервера</p>
+                <p><strong>Имя:</strong> Данил</p>
+                <p><strong>Возраст:</strong> 16 лет</p>
+                <div class="admin-info">
+                    <p>Endylanel — основатель и руководитель проекта. Обеспечивает развитие сервера и управления им.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="admin-card">
-            <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731837_21-abrakadabra-fun-p-anime-avi-obrabotannie-milie-21.jpg" alt="✞EZ✞">
-            <h3>✞EZ✞</h3>
-            <p>Гл. Администратор</p>
-            <p><strong>Имя:</strong> Саша</p>
-            <p><strong>Возраст:</strong> 16 лет</p>
-            <div class="admin-info">
-                <p>✞EZ✞ — главный администратор, занимается техническими аспектами и управлением на сервере.
-                Текст от администратора: Привет! С вами главный администратор сервера EZ (Александр). Увлекаюсь ПВЕ играми, такими как Сталкер, Метро и т.п. Иногда поиграю в Раст, КС, Доту. Работая над сервером, управляю и контролирую нашу команду, предлагаю идеи для улучшения.</p>
+            <div class="admin-card">
+                <img src="https://abrakadabra.fun/uploads/posts/2021-12/1640731837_21-abrakadabra-fun-p-anime-avi-obrabotannie-milie-21.jpg" alt="✞EZ✞">
+                <h3>✞EZ✞</h3>
+                <p>Гл. Администратор</p>
+                <p><strong>Имя:</strong> Саша</p>
+                <p><strong>Возраст:</strong> 16 лет</p>
+                <div class="admin-info">
+                    <p>✞EZ✞ — главный администратор, занимается техническими аспектами и управлением на сервере.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="admin-card">
-            <img src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1640731849_12-abrakadabra-fun-p-anime-avi-obrabotannie-milie-12.jpg" alt="Чарик">
-            <h3>Чарик</h3>
-            <p>Администратор</p>
-            <p><strong>Имя:</strong> Саша</p>
-            <p><strong>Возраст:</strong> 16 лет</p>
-            <div class="admin-info">
-                <p>Чарик — администратор, помогает с организацией мероприятий и обеспечением порядка на сервере.</p>
+            <div class="admin-card">
+                <img src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1640731849_12-abrakadabra-fun-p-anime-avi-obrabotannie-milie-12.jpg" alt="Чарик">
+                <h3>Чарик</h3>
+                <p>Администратор</p>
+                <p><strong>Имя:</strong> Саша</p>
+                <p><strong>Возраст:</strong> 16 лет</p>
+                <div class="admin-info">
+                    <p>Чарик — администратор, помогает с организацией мероприятий и обеспечением порядка на сервере.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="admin-card">
-            <img src="https://i.pinimg.com/736x/c4/63/36/c463367248b06d6d4ce1331ade3f3129.jpg" alt="Enot_iz_Berlogi 🐾">
-            <h3>Enot_iz_Berlogi 🐾</h3>
-            <p>Тест.Модератор</p>
-            <p><strong>Имя:</strong> Илья</p>
-            <p><strong>Возраст:</strong> 17 лет</p>
-            <div class="admin-info">
-                <p>Enot_iz_Berlogi 🐾 — тестовый модератор, помогает поддерживать порядок на сервере, проверяет новые функции и всегда готов помочь пользователям!</p>
+            <div class="admin-card">
+                <img src="https://i.pinimg.com/736x/c4/63/36/c463367248b06d6d4ce1331ade3f3129.jpg" alt="Enot_iz_Berlogi 🐾">
+                <h3>Enot_iz_Berlogi 🐾</h3>
+                <p>Тест.Модератор</p>
+                <p><strong>Имя:</strong> Илья</p>
+                <p><strong>Возраст:</strong> 17 лет</p>
+                <div class="admin-info">
+                    <p>Enot_iz_Berlogi 🐾 — тестировщик и модератор, помогает с поддержанием правил и организации сервера.</p>
+                </div>
             </div>
+        </section>
+
+        <div class="button-container">
+            <a href="https://discord.gg/wQCb3rUxsq" class="button">Присоединиться</a>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2024 Arcade Empires. Все права защищены.</p>
     </footer>
 
     <script>
-        // Создаем звезды в случайных местах на экране
         const starsContainer = document.querySelector('.stars');
-        for (let i = 0; i < 100; i++) {
+        const starCount = 100; // Количество звезд
+
+        for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
-            star.style.top = `${Math.random() * 100}vh`;
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.animationDuration = `${Math.random() * 5 + 2}s`; // случайная скорость движения
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDuration = Math.random() * 3 + 2 + 's';
+            star.style.animationDelay = Math.random() * 5 + 's';
             starsContainer.appendChild(star);
         }
     </script>

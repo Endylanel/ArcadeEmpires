@@ -43,19 +43,19 @@
         }
 
         header {
-            padding: 30px 20px; /* Уменьшено пространство для заголовка */
+            padding: 30px 20px;
             text-align: center;
             color: #ffffff;
             position: relative;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://your-image-url.com/image.jpg') no-repeat center center/cover;
-            height: 45vh; /* Уменьшена высота */
+            height: 45vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         header h1 {
-            font-size: 3em; /* Уменьшен размер шрифта */
+            font-size: 3em;
             margin: 0;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
@@ -83,26 +83,39 @@
         }
 
         .feature-card {
-            background-color: #141414; /* Черный фон по умолчанию */
+            background-color: #141414; /* Черный фон */
             border-radius: 15px;
             padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease, background 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); /* Добавлена тень */
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.05); /* Карточки увеличиваются */
             background: linear-gradient(135deg, #000000, #e50914); /* Градиент с черного на красный */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9); /* Увеличена тень */
         }
 
         .feature-card h3 {
             margin: 10px 0;
-            font-size: 1.5em;
+            font-size: 1.6em; /* Увеличен размер шрифта */
+            color: #ffffff; /* Цвет текста */
+            transition: color 0.3s ease;
+        }
+
+        .feature-card:hover h3 {
+            color: #e50914; /* Красный цвет текста при наведении */
         }
 
         .feature-card p {
             font-size: 1.2em;
+            color: #cccccc; /* Легкий серый цвет текста */
+            transition: color 0.3s ease;
+        }
+
+        .feature-card:hover p {
+            color: #ffffff; /* Белый цвет текста при наведении */
         }
 
         .button-container {

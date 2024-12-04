@@ -83,6 +83,7 @@
         }
 
         .admin-card {
+            position: relative;
             background-color: #141414;
             border-radius: 15px;
             padding: 15px;
@@ -99,7 +100,7 @@
 
         .admin-card h3 {
             margin: 10px 0;
-            font-size: 1.4em; /* Уменьшен размер шрифта */
+            font-size: 1.4em;
             color: #ffffff;
             transition: color 0.3s ease;
         }
@@ -109,13 +110,23 @@
         }
 
         .admin-card p {
-            font-size: 1em; /* Уменьшен размер шрифта */
+            font-size: 1em;
             color: #cccccc;
             transition: color 0.3s ease;
         }
 
         .admin-card:hover p {
             color: #ffffff;
+        }
+
+        .admin-info {
+            display: none;
+            color: #cccccc;
+            margin-top: 10px;
+        }
+
+        .admin-card:hover .admin-info {
+            display: block;
         }
 
         footer {
@@ -232,8 +243,8 @@
             </div>
 
             <div class="admin-card">
-                <img src="https://i.pinimg.com/736x/c4/63/36/c463367248b06d6d4ce1331ade3f3129.jpg" alt="Enot_iz_Berlogi 🐾">
-                <h3>Enot_iz_Berlogi 🐾</h3>
+                <img src="https://i.pinimg.com/736x/c4/63/36/c463367248b06d6d4ce1331ade3f3129.jpg" alt="Enot_iz_Berlogi">
+                <h3>Enot_iz_Berlogi</h3>
                 <p>Тестировщик и модератор</p>
                 <p><strong>Имя:</strong> Илья</p>
                 <p><strong>Возраст:</strong> 17 лет</p>
